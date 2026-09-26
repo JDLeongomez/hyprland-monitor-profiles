@@ -1,5 +1,9 @@
 # hyprland-monitor-profiles
 
+> ⚠️ Gran parte del código de este plugin fue creado con Claude Code (Sonnet 5). 
+Con el plugin solo busco dar solución a un problema puntual de mi sistema, 
+pero lo dejo público en caso de que sea útil para alguien más.
+
 Cambia rápido entre 3 configuraciones de monitores en Hyprland (config nativa
 en Lua), con un widget en la barra de [Noctalia](https://noctalia.dev) y 3
 atajos de teclado directos. Pensado originalmente para un setup de 2
@@ -55,7 +59,7 @@ como para lo que escribe en el archivo.
 ## Instalación
 
 ```sh
-git clone <url-de-este-repo> ~/Documents/GitHub/hyprland-monitor-profiles
+git clone https://github.com/JDLeongomez/hyprland-monitor-profiles ~/Documents/GitHub/hyprland-monitor-profiles
 cd ~/Documents/GitHub/hyprland-monitor-profiles
 ./install.sh
 ```
@@ -103,10 +107,10 @@ siempre `all` para confirmar el estado real.
 
 ## Limitaciones conocidas
 
-- Los nombres de salida (`DP-2`, `DP-3`, `HDMI-A-1`) están hardcodeados al
+- Los nombres de salida (`DP-2`, `DP-3`, `HDMI-A-1`) están codificado de forma fija al
   inicio de `monitor-profile.sh`. En otra máquina, con otro hardware, hay que
-  editarlos a mano — no es un setting configurable desde la UI de Noctalia
-  (a propósito: generalizarlo así solo tendría sentido para publicarlo en el
+  editarlos a mano, y no es una configuración que se pueda cambiar desde la UI de Noctalia
+  (generalizarlo así solo tendría sentido para publicarlo en el
   catálogo comunitario, que no es el objetivo de este repo).
 - Requiere que tu config de Hyprland use el estilo Lua nativo
   (`hl.monitor`, `hl.bind`); no aplica a un `hyprland.conf` clásico sin
