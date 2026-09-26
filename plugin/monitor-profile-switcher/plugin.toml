@@ -1,0 +1,18 @@
+id = "jdl/monitor-profile-switcher"
+name = "Monitor Profile Switcher"
+description = "Switch between predefined Hyprland monitor layouts: dual, extended, mirror"
+version = "0.1.0"
+plugin_api = 9
+author = "jdl"
+license = "MIT"
+icon = "devices"
+tags = ["hyprland"]
+dependencies = ["hyprland"]
+
+[[service]]
+id = "poller"
+entry = "service.luau"
+
+[[widget]]
+id = "toggle"
+entry = "widget.luau"
